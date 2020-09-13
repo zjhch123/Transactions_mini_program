@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "taro/react",
+    "plugin:react/recommended"
+  ],
+  "ignore": [
+    "config/**/*.js",
+    "babel.config.js",
+    "dist/**/*.js"
+  ],
+  "rules": {
+    "semi": "error",
+    "eol-last": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "jsx-quotes": ["error", "prefer-double"]
+  }
+}

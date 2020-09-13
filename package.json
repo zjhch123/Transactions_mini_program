@@ -1,0 +1,46 @@
+{
+  "name": "transactions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "show your transactions",
+  "templateInfo": {
+    "name": "default",
+    "typescript": false,
+    "css": "less"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "build:h5": "taro build --type h5",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "zjhch123",
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@tarojs/components": "3.0.8",
+    "@tarojs/react": "3.0.8",
+    "@tarojs/runtime": "3.0.8",
+    "@tarojs/taro": "3.0.8",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@tarojs/mini-runner": "3.0.8",
+    "@tarojs/webpack-runner": "3.0.8",
+    "@types/react": "^16.0.0",
+    "@types/webpack-env": "^1.13.6",
+    "babel-preset-taro": "3.0.8",
+    "eslint": "^6.8.0",
+    "eslint-config-taro": "3.0.8",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "stylelint": "9.3.0"
+  }
+}
