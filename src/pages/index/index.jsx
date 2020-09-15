@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button, View, Picker, Text } from '@tarojs/components';
-import { useLayout } from '../../context/layout';
+import { NavigationBar } from '../../controls/navigation-bar';
 
 import './index.less';
-
-const NavigationBar = () => {
-  const layout = useLayout();
-
-  return layout && layout.menu && (
-    <View style={{ paddingTop: layout.menu.top, textAlign: 'center', backgroundColor: '#0078d4' }}>
-      <Text style={{ lineHeight: layout.menu.height + 'px', color: 'white' }}>记账本</Text>
-    </View>
-  );
-};
 
 const Transactions = () => {
   return (
@@ -26,16 +16,16 @@ const Transactions = () => {
         </View>
         <View className="history-simple-info">
           <View className="history">
-            <Picker>2020年 第n周期</Picker>
+            <Picker>2020年 第n个周期</Picker>
           </View>
           <View className="info">
             <View className="outgo">
               <Text>总支出</Text>
-              <Text>￥xxx</Text>
+              <Text>￥30.00</Text>
             </View>
             <View className="income">
               <Text>总收入</Text>
-              <Text>￥xxx</Text>
+              <Text>￥30.00</Text>
             </View>
           </View>
         </View>

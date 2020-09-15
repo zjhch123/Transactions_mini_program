@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
-const LayouContext = createContext(null);
+const LayoutContext = createContext(null);
 
-export const useLayout = () => useContext(LayouContext);
+export const useLayout = () => useContext(LayoutContext);
 
 export const LayoutContextProvider = ({ children }) => {
   const [menu, setMenu] = useState(null);
@@ -11,5 +12,13 @@ export const LayoutContextProvider = ({ children }) => {
     setMenu(wx.getMenuButtonBoundingClientRect());
   }, []);
 
-  return <LayouContext.Provider value={{ menu }}>{children}</LayouContext.Provider>;
+  return <LayoutContext.Provider value={{ menu }}>{children}</LayoutContext.Provider>;
+};
+
+LayoutContextProvider.propTypes = {
+  children: PropTypes.node,
+};
+
+LayoutContextProvider.defaultProps = {
+  children: null,
 };
