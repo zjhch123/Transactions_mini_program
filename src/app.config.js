@@ -3,9 +3,7 @@ export default {
     'pages/index/index',
   ],
   window: {
-    navigationBarBackgroundColor: '#0078d4',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'white',
+    navigationStyle: 'custom',
     backgroundColorTop: '#0078d4',
     backgroundColorBottom: '#ECEDEE',
   },
