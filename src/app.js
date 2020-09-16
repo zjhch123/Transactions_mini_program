@@ -1,9 +1,18 @@
 import React from 'react';
-import { LayoutContextProvider } from './context/layout';
+import PropTypes from 'prop-types';
+import { AppContextProvider, LayoutContextProvider } from './context';
 import './app.less';
 
-export default ({ children }) => (
-  <LayoutContextProvider>
-    {children}
-  </LayoutContextProvider>
+const App = ({ children }) => (
+  <AppContextProvider>
+    <LayoutContextProvider>
+      {children}
+    </LayoutContextProvider>
+  </AppContextProvider>
 );
+
+App.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default App;

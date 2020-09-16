@@ -4,7 +4,7 @@ export default {
   ],
   window: {
     navigationStyle: 'custom',
-    backgroundColorTop: '#0078d4',
+    backgroundColorTop: '#ECEDEE',
     backgroundColorBottom: '#ECEDEE',
   },
 };

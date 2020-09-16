@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { View, Text } from '@tarojs/components';
 
-import { useLayout } from '../../context/layout';
+import { useLayout } from '../../context';
 
 import './index.less';
 
 export const NavigationBar = ({ className }) => {
-  const { menu } = useLayout() || {};
-  const height = menu.top + menu.height;
+  const { menu, navigationBar } = useLayout();
+  const height = navigationBar ? navigationBar.height : 0;
 
   return menu && (
     <View className={classnames('navigation-bar', className)}>
