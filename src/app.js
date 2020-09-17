@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AppContextProvider, LayoutContextProvider } from './context';
+import { AppContextProvider, LayoutContextProvider } from './contexts';
 import './app.less';
 
 const App = ({ children }) => (
