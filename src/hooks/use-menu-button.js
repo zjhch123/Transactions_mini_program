@@ -12,10 +12,11 @@ export const useMenuButton = () => {
 
         if (menu.top === 0) {
           setRetryCount(retryCount + 1);
-          console.log('getMenuButtonBoundingClientRect failed, Retry...');
+          console.log('getMenuButtonBoundingClientRect error, top is 0, Retry...');
           return;
         }
 
+        console.log('getMenuButtonBoundingClientRect successfully', retryCount);
         setStatus(menu);
       } catch (e) {
         console.log('getMenuButtonBoundingClientRect error, Retry...', e);
