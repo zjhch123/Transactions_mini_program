@@ -22,7 +22,7 @@ export const useMenuButton = () => {
         console.log('getMenuButtonBoundingClientRect error, Retry...', e);
         setRetryCount(retryCount + 1);
       }
-    }, 100);
+    }, 50);
 
     return () => clearTimeout(timeoutId);
   }, [retryCount]);
