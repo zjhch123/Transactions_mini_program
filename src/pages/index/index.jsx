@@ -4,7 +4,7 @@ import { TopBar, NavigationBar } from '../../controls';
 
 import './index.less';
 
-const TransactionItemSumamry = () => (
+const TransactionItemSummary = () => (
   <View className="transaction-item-summary">
     <View className="transaction-item-summary-date">
       <Text>9月18日</Text>
@@ -41,7 +41,7 @@ const TransactionItem = () => (
 
 const TransactionGroup = () => (
   <View className="transaction-group">
-    <TransactionItemSumamry />
+    <TransactionItemSummary />
     <View className="transaction-items">
       <TransactionItem />
       <TransactionItem />
