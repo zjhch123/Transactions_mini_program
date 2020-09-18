@@ -1,4 +1,7 @@
 .top-bar {
+  position: relative;
+  z-index: 20;
+  
   .top-bar-inner {
     background-color: #0078d4;
     padding: 40px 0 0 24px;
@@ -25,11 +28,17 @@
     display: flex;
     font-size: 26px;
     color: white;
+    .history {
+      font-family: -apple-system, 'Pingfang SC', system-ui, sans-serif;
+    }
     .info {
       margin-left: 12px;
       display: flex;
       .income {
         margin-left: 12px;
+      }
+      .amount {
+        letter-spacing: -1px;
       }
     }
   }

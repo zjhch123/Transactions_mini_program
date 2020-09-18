@@ -1,0 +1,120 @@
+.items-list {
+  padding: 16px 0;
+}
+
+// TODO: Need to create a component for this and move the less into the component folder
+.transaction-group {
+  width: 710px;
+  background-color: white;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+
+  & + .transaction-group {
+    margin-top: 16px;
+  }
+
+  .transaction-item-summary {
+    background-color: rgb(251, 251, 251);
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 28px;
+    font-size: 30px;
+    font-weight: 500;
+
+    .transaction-item-summary-date {
+      font-family: -apple-system, 'Pingfang SC', system-ui, sans-serif;
+      & > text {
+        margin-right: 12px;
+      }
+    }
+    .transaction-item-summary-money {
+      display: flex;
+      align-items: center;
+      .mark {
+        text-align: center;
+        line-height: 30px;
+        display: block;
+        font-size: 22px;
+        color: rgb(159, 159, 159);
+        background-color: rgb(241, 241, 241);
+        width: 30px;
+        height: 30px;
+        margin-right: 6px;
+        margin-left: 16px;
+      }
+      .amount {
+        letter-spacing: -1px;
+        font-size: 28px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .transaction-item {
+    display: flex;
+    align-items: center;
+
+    .transaction-item-icon {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .temp-icon {
+        width: 70px;
+        height: 70px;
+        background-color: #0078d4;
+        border-radius: 50%;
+      }
+    }
+
+    .transaction-item-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 32px 0;
+      margin-right: 28px;
+      .details {
+        flex: 1;
+        font-family: -apple-system, 'Pingfang SC', system-ui, sans-serif;
+        .name {
+          font-size: 30px;
+          line-height: 1.6;
+        }
+        .description {
+          font-size: 24px;
+          color: rgb(175, 175, 175);
+
+          .comment {
+            margin-left: 12px;
+            padding-left: 12px;
+            position: relative;
+
+            &:before {
+              position: absolute;
+              left: 0;
+              top: 50%;
+              bottom: 0;
+              width: 2px;
+              height: 80%;
+              transform: translateY(-50%);
+              background-color: rgb(225, 225, 225);
+              content: '';
+            }
+          }
+        }
+      }
+      .amount {
+        font-weight: 500;
+        font-size: 32px;
+        letter-spacing: -1px;
+      }
+    }
+
+    & + .transaction-item .transaction-item-details {
+      border-top: 1px solid rgb(228, 228, 228);
+    }
+  }
+}

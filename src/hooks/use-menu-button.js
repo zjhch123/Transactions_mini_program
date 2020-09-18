@@ -17,6 +17,11 @@ export const useMenuButton = () => {
         }
 
         console.log('getMenuButtonBoundingClientRect successfully', retryCount);
+        
+        // TODO: Hard code here due to wechat has issue of the button position.
+        menu.top += 2;
+        menu.bottom += 2;
+
         setStatus(menu);
       } catch (e) {
         console.log('getMenuButtonBoundingClientRect error, Retry...', e);

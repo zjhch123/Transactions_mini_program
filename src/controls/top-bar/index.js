@@ -24,11 +24,11 @@ export const TopBar = ({ className }) => {
           <View className="info">
             <View className="outgo">
               <Text>总支出</Text>
-              <Text>￥30.00</Text>
+              <Text className="amount">￥30.00</Text>
             </View>
             <View className="income">
               <Text>总收入</Text>
-              <Text>￥30.00</Text>
+              <Text className="amount">￥30.00</Text>
             </View>
           </View>
         </View>
