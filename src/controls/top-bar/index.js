@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { Button, View, Picker, Text } from '@tarojs/components';
+import { Button, View, Text } from '@tarojs/components';
 import { useLayout } from '../../contexts';
 
 import './index.less';
@@ -18,9 +18,7 @@ export const TopBar = ({ className }) => {
           </Button>
         </View>
         <View className="history-simple-info">
-          <View className="history">
-            <Picker>2020年 第n个周期</Picker>
-          </View>
+          <Button className="history" size="mini" plain>2020年 第n个周期</Button>
           <View className="info">
             <View className="outgo">
               <Text>总支出</Text>

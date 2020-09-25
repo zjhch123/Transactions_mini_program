@@ -1,0 +1,66 @@
+.transaction-item {
+    display: flex;
+    align-items: center;
+  
+    .transaction-item-icon {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .temp-icon {
+        width: 70px;
+        height: 70px;
+        background-color: #0078d4;
+        border-radius: 50%;
+      }
+    }
+  
+    .transaction-item-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 32px 0;
+      margin-right: 28px;
+      .details {
+        flex: 1;
+        font-family: -apple-system, 'Pingfang SC', system-ui, sans-serif;
+        .name {
+          font-size: 28px;
+          line-height: 1.6;
+        }
+        .description {
+          font-size: 24px;
+          color: rgb(175, 175, 175);
+  
+          .comment {
+            margin-left: 12px;
+            padding-left: 12px;
+            position: relative;
+  
+            &:before {
+              position: absolute;
+              left: 0;
+              top: 50%;
+              bottom: 0;
+              width: 2px;
+              height: 60%;
+              transform: translateY(-50%);
+              background-color: rgb(225, 225, 225);
+              content: '';
+            }
+          }
+        }
+      }
+      .amount {
+        font-weight: 500;
+        font-size: 32px;
+        letter-spacing: -1px;
+      }
+    }
+  
+    & + .transaction-item .transaction-item-details {
+      border-top: 1px solid rgb(228, 228, 228);
+    }
+  }
